@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "obts9Ra4IfMgHiueEzCEd0zHZi6Bw/b+l43dRQMLCMsp0aXVSSBRgIQdpj/IM3UzmDR9JYqQQ9/G9ikyF/0duw==",
+  "dgSpecHash": "PqNbpKyGepOEibwEU6PhSMAxRFA4bE6KeAoeklt+tOCF1G42DtOq/CvT4ktAtoY7tdB18V7G2TbPJX+fKTvd/A==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Decagon\\Source\\Repos\\movie-app-backend\\MovieApp\\movie.api.csproj",
+  "projectFilePath": "C:\\Users\\Decagon\\source\\repos\\movie-app-backend\\MovieApp\\movie.api.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Decagon\\.nuget\\packages\\microsoft.extensions.apidescription.server\\6.0.5\\microsoft.extensions.apidescription.server.6.0.5.nupkg.sha512",
     "C:\\Users\\Decagon\\.nuget\\packages\\microsoft.extensions.caching.abstractions\\8.0.0\\microsoft.extensions.caching.abstractions.8.0.0.nupkg.sha512",
@@ -17,6 +17,7 @@
     "C:\\Users\\Decagon\\.nuget\\packages\\microsoft.extensions.options\\8.0.0\\microsoft.extensions.options.8.0.0.nupkg.sha512",
     "C:\\Users\\Decagon\\.nuget\\packages\\microsoft.extensions.primitives\\8.0.0\\microsoft.extensions.primitives.8.0.0.nupkg.sha512",
     "C:\\Users\\Decagon\\.nuget\\packages\\microsoft.openapi\\1.2.3\\microsoft.openapi.1.2.3.nupkg.sha512",
+    "C:\\Users\\Decagon\\.nuget\\packages\\microsoft.visualstudio.azure.containers.tools.targets\\1.19.4\\microsoft.visualstudio.azure.containers.tools.targets.1.19.4.nupkg.sha512",
     "C:\\Users\\Decagon\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512",
     "C:\\Users\\Decagon\\.nuget\\packages\\swashbuckle.aspnetcore\\6.5.0\\swashbuckle.aspnetcore.6.5.0.nupkg.sha512",
     "C:\\Users\\Decagon\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\6.5.0\\swashbuckle.aspnetcore.swagger.6.5.0.nupkg.sha512",

@@ -91,3 +91,4 @@ C:\Users\Decagon\source\repos\movie-app-backend\MovieApp\obj\Debug\net6.0\refint
 C:\Users\Decagon\source\repos\movie-app-backend\MovieApp\obj\Debug\net6.0\movie.api.pdb
 C:\Users\Decagon\source\repos\movie-app-backend\MovieApp\obj\Debug\net6.0\movie.api.genruntimeconfig.cache
 C:\Users\Decagon\source\repos\movie-app-backend\MovieApp\obj\Debug\net6.0\ref\movie.api.dll
+C:\Users\Decagon\Source\Repos\movie-app-backend\MovieApp\obj\Debug\net6.0\movie.api.MvcApplicationPartsAssemblyInfo.cs

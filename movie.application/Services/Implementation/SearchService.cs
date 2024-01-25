@@ -27,7 +27,7 @@ namespace movie.application.Services.Implementation
             }
 
             var moviesToReturn = new List<GetMoviesResponseDTO>();
-
+         
             foreach (var movie in movies.Search)
             {
                 moviesToReturn.Add(new GetMoviesResponseDTO()

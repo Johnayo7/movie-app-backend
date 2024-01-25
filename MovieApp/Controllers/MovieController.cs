@@ -18,7 +18,7 @@ namespace movie.api.Controllers
         }
 
         [HttpGet("Search/{title}")]
-        public async Task<IActionResult> SearchMovies(string title, int pageNumber)
+        public async Task<IActionResult> SearchMovies(string title, int pageNumber = 1)
         {
             if (string.IsNullOrEmpty(title))
                 return BadRequest(new ApiResponseDTO<string> { Status = false, Message = "Title cannot be Empty"});

@@ -20,9 +20,9 @@ namespace movie.application.MovieApiIntegration.Implementation
             _apiKey = _configuration.GetValue<string>("MovieApiConfig:ApiKey");
         }
 
-        public async Task<(SearchMovieResponseDTO, int)> GetMovies(string title)
+        public async Task<(SearchMovieResponseDTO, int)> GetMovies(string title, int pageNumber)
         {
-            var omdbApiUrl = $"{_baseUrl}?apikey={_apiKey}&s={title}";
+            var omdbApiUrl = $"{_baseUrl}?apikey={_apiKey}&s={title}&page={pageNumber}";
             var client = _httpClientFactory.CreateClient();
             var httpResponse = await client.GetAsync(omdbApiUrl);
             var httpStringResponse = await httpResponse.Content.ReadAsStringAsync();

@@ -17,9 +17,9 @@ namespace movie.application.Services.Implementation
             _cache = cache;
         }
 
-        public async Task<(ApiResponseDTO<List<GetMoviesResponseDTO>>, int)> SearchMovies(string movieTitle)
+        public async Task<(ApiResponseDTO<List<GetMoviesResponseDTO>>, int)> SearchMovies(string movieTitle, int pageNumber)
         {
-            var (movies, statusCode) = await _movieClient.GetMovies(movieTitle);
+            var (movies, statusCode) = await _movieClient.GetMovies(movieTitle, pageNumber);
 
             if (statusCode != 200)
             {

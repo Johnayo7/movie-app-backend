@@ -9,7 +9,7 @@ namespace movie.application.MovieApiIntegration.Interface
 {
     public interface IMovieClient
     {
-        Task<(SearchMovieResponseDTO, int)> GetMovies(string title);
+        Task<(SearchMovieResponseDTO, int)> GetMovies(string title, int pageNumber);
         Task<(MovieDetails, int)> GetMovieDetails(string movieId);
     }
 }

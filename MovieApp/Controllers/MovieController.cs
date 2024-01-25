@@ -11,10 +11,28 @@ namespace movie.api.Controllers
     public class MovieController : ControllerBase
     {
         private readonly ISearchService _searchService;
+        private readonly IConfiguration _configuration;
 
-        public MovieController(ISearchService searchService)
+        public MovieController(ISearchService searchService, IConfiguration configuration)
         {
             _searchService = searchService;
+            _configuration = configuration;
+        }
+
+        [HttpGet("[action]")]
+        public async Task<IActionResult> LandingPage (int pageNumber = 1)
+        {
+            try
+            {
+                var landingPageKeyWord = _configuration.GetValue<string>("LandingPage");
+                var (responseResult, statusCode) = await _searchService.SearchMovies(landingPageKeyWord, pageNumber);
+                return StatusCode(statusCode, responseResult);
+            }
+            catch (Exception)
+            {
+                // Handle API request error
+                return StatusCode(500, "Error searching movies from OMDB API");
+            }
         }
 
         [HttpGet("Search/{title}")]

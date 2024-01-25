@@ -41,8 +41,7 @@ namespace movie.application.Services.Implementation
             }
 
             SaveSearchQuery(movieTitle);
-            return (new ApiResponseDTO<List<GetMoviesResponseDTO>> { Status = true, Message = "Successfully retrieve movies", Data = moviesToReturn }, 200);
-
+            return (new ApiResponseDTO<List<GetMoviesResponseDTO>> { Status = true, Message = "Successfully retrieved movies", Data = moviesToReturn }, 200);
         }
 
         public async Task<(ApiResponseDTO<GetSingleMovieDTO>, int)> GetSingleMovie(string imDbId)
@@ -51,7 +50,7 @@ namespace movie.application.Services.Implementation
 
             if (statusCode != 200)
             {
-                return (new ApiResponseDTO<GetSingleMovieDTO> { Status = false, Message = "Error occured while fetching movies" }, 500);
+                return (new ApiResponseDTO<GetSingleMovieDTO> { Status = false, Message = "Error occured while fetching movie" }, 500);
             }
 
             if (movie.Response == "False")
@@ -74,13 +73,8 @@ namespace movie.application.Services.Implementation
                 imdbID = movie.imdbID
             };
 
-
-
-            return (new ApiResponseDTO<GetSingleMovieDTO> { Status = true, Message = "Successfully retrieve movies", Data = movieToReturn }, 200);
-
+            return (new ApiResponseDTO<GetSingleMovieDTO> { Status = true, Message = "Successfully retrieved movie", Data = movieToReturn }, 200);
         }
-
-
 
         public void SaveSearchQuery(string saveQueries)
         {
@@ -95,7 +89,6 @@ namespace movie.application.Services.Implementation
             {
                 queriesFromCache.Add(saveQueries);
                 _cache.Set<List<string>>("movies", queriesFromCache);
-
             }
 
             else
@@ -111,11 +104,7 @@ namespace movie.application.Services.Implementation
         {
             var queriesFromCache = _cache.Get<List<string>>("movies");
 
-
             return (new ApiResponseDTO<List<string>> { Status = true, Message = "Successfully retrieve movies", Data = queriesFromCache }, 200);
-
         }
-
-
     }
 }

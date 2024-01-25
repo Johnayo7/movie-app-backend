@@ -17,11 +17,6 @@ namespace movie.api.Controllers
             _searchService = searchService;
         }
 
-
-
-        //private const string ApiKey = "f467275d";
-
-
         [HttpGet("Search/{title}")]
         public async Task<IActionResult> SearchMovies(string title)
         {
@@ -46,7 +41,6 @@ namespace movie.api.Controllers
             if (string.IsNullOrEmpty(imDbId))
                 return BadRequest(new ApiResponseDTO<string> { Status = false, Message = "Title cannot be Empty" });
 
-
             {
                 try
                 {
@@ -67,7 +61,6 @@ namespace movie.api.Controllers
             var (responseResult, statusCode) = await _searchService.GetLatestSearchQueriesAsync();
             return StatusCode(statusCode, responseResult);
         }
-
     }
 }
 

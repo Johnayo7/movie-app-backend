@@ -8,6 +8,5 @@ namespace movie.application.Services.Interface
         Task<(ApiResponseDTO<List<GetMoviesResponseDTO>>, int)> SearchMovies(string movieTitle);
         Task<(ApiResponseDTO<GetSingleMovieDTO>, int)> GetSingleMovie(string imDbId);
         Task<(ApiResponseDTO<List<string>>, int)> GetLatestSearchQueriesAsync();
-
     }
 }

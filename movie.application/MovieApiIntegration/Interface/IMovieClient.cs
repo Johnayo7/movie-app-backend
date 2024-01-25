@@ -11,6 +11,5 @@ namespace movie.application.MovieApiIntegration.Interface
     {
         Task<(SearchMovieResponseDTO, int)> GetMovies(string title);
         Task<(MovieDetails, int)> GetMovieDetails(string movieId);
-
     }
 }

@@ -6,7 +6,6 @@ using System.Threading.Tasks;
 
 namespace movie.application.DTO.Response
 {
-   
     public class SearchMovieResponseDTO
     {
         public List<Search> Search { get; set; }
@@ -22,5 +21,4 @@ namespace movie.application.DTO.Response
         public string Type { get; set; }
         public string Poster { get; set; }
     }
-
 }

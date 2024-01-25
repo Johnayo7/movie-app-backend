@@ -67,7 +67,7 @@ namespace movie.application.Services.Implementation
                 Released = movie.Released,
                 Duration = movie.Runtime,
                 Genre = movie.Genre,
-                Description = movie.Plot,
+                Plot = movie.Plot,
                 Poster = movie.Poster,
                 imdbRating = movie.imdbRating,
                 imdbID = movie.imdbID

@@ -18,14 +18,14 @@ namespace movie.api.Controllers
         }
 
         [HttpGet("Search/{title}")]
-        public async Task<IActionResult> SearchMovies(string title)
+        public async Task<IActionResult> SearchMovies(string title, int pageNumber)
         {
             if (string.IsNullOrEmpty(title))
                 return BadRequest(new ApiResponseDTO<string> { Status = false, Message = "Title cannot be Empty"});
 
             try
             {
-                var (responseResult, statusCode) = await _searchService.SearchMovies(title);
+                var (responseResult, statusCode) = await _searchService.SearchMovies(title, pageNumber);
                 return StatusCode(statusCode, responseResult);  
             }
             catch (Exception)

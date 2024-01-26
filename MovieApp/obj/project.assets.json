@@ -1246,13 +1246,13 @@
     },
     "movie.application/1.0.0": {
       "type": "project",
-      "path": "../movie.application/movie.application.csproj",
-      "msbuildProject": "../movie.application/movie.application.csproj"
+      "path": "../../movie.application/movie.application.csproj",
+      "msbuildProject": "../../movie.application/movie.application.csproj"
     },
     "movie.domain/1.0.0": {
       "type": "project",
-      "path": "../movie.domain/movie.domain.csproj",
-      "msbuildProject": "../movie.domain/movie.domain.csproj"
+      "path": "../../movie.domain/movie.domain.csproj",
+      "msbuildProject": "../../movie.domain/movie.domain.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -1297,8 +1297,8 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "C:\\Users\\Decagon\\Source\\Repos\\movie-app-backend\\movie.application\\movie.application.csproj": {
-              "projectPath": "C:\\Users\\Decagon\\Source\\Repos\\movie-app-backend\\movie.application\\movie.application.csproj"
+            "C:\\Users\\Decagon\\Source\\Repos\\movie.application\\movie.application.csproj": {
+              "projectPath": "C:\\Users\\Decagon\\Source\\Repos\\movie.application\\movie.application.csproj"
             }
           }
         }

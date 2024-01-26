@@ -19,6 +19,7 @@ namespace MovieApp
             builder.Services.AddHttpClient();
             builder.Services.AddMemoryCache();
             builder.Services.AddScoped<ISearchService, SearchService>();
+            builder.Services.AddScoped<ICacheHandler, CacheHandler>();
 
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddEndpointsApiExplorer();

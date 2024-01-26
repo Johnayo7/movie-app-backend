@@ -17,7 +17,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\movie.application\movie.application.csproj" />
+    <ProjectReference Include="..\..\movie.application\movie.application.csproj" />
   </ItemGroup>
 
 </Project>

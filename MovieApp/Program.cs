@@ -24,13 +24,29 @@ namespace MovieApp
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
 
+            builder.Services.AddCors(options =>
+            {
+                options.AddDefaultPolicy(
+                    builder =>
+                    {
+                        builder
+                             // .WithOrigins("http://127.0.0.1:5173")
+                             .AllowAnyOrigin()
+                                .AllowAnyHeader()
+                                .AllowAnyMethod();
+                    });
+            });
+
             var app = builder.Build();
 
+            app.UseCors();
+
             // Configure the HTTP request pipeline.
-          
-                app.UseSwagger();
+
+            app.UseSwagger();
                 app.UseSwaggerUI();
-            
+
+           
 
             app.UseHttpsRedirection();
 

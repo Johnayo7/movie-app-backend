@@ -26,12 +26,18 @@ namespace movie.test
         public async Task SearchMovies_DoesNotReturnNull()
         {
             // Arrange
-            _mockMovieClient.Setup(s => s.GetMovies("", 1)).ReturnsAsync((new SearchMovieResponseDTO {Search = new List<Search> { new Search {Title="star wars", imdbID = "tt002345", Poster = "www.thumbnail.com", Type = "movie", Year = "2009" } }  }, 200));
+            var getMovieReturnObject = new SearchMovieResponseDTO
+            {
+                Search = new List<Search> { new Search { Title = "star wars", imdbID = "tt002345",
+                Poster = "www.thumbnail.com", Type = "movie", Year = "2009" } }
+            };
 
-            _mockCacheHandler.Setup(s => s.SaveSearchQuery(""));
+            _mockMovieClient.Setup(s => s.GetMovies("star wars", 1)).ReturnsAsync((getMovieReturnObject, 200));
+
+            _mockCacheHandler.Setup(s => s.SaveSearchQuery("star wars"));
 
             // Act
-            var result = await _sut.SearchMovies("", 1);
+            var result = await _sut.SearchMovies("star wars", 1);
 
             // Assert
             Assert.NotNull(result);
@@ -42,12 +48,18 @@ namespace movie.test
         public async Task SearchMovies_ReturnsListOfMovies()
         {
             // Arrange
-            _mockMovieClient.Setup(s => s.GetMovies("", 1)).ReturnsAsync((new SearchMovieResponseDTO { Search = new List<Search> { new Search { Title = "star wars", imdbID = "tt002345", Poster = "www.thumbnail.com", Type = "movie", Year = "2009" } } }, 200));
+            var getMovieReturnObject = new SearchMovieResponseDTO
+            {
+                Search = new List<Search> { new Search { Title = "star wars", imdbID = "tt002345",
+                Poster = "www.thumbnail.com", Type = "movie", Year = "2009" } }
+            };
 
-            _mockCacheHandler.Setup(s => s.SaveSearchQuery(""));
+            _mockMovieClient.Setup(s => s.GetMovies("star wars", 1)).ReturnsAsync((getMovieReturnObject, 200));
+
+            _mockCacheHandler.Setup(s => s.SaveSearchQuery("star wars"));
 
             // Act
-            var result = await _sut.SearchMovies("", 1);
+            var result = await _sut.SearchMovies("star wars", 1);
 
             // Assert
             Assert.IsType<ApiResponseDTO<List<GetMoviesResponseDTO>>>(result.Item1);

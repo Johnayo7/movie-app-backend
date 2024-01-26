@@ -1,7 +1,9 @@
+using movie.api.Middlewares;
 using movie.application.MovieApiIntegration.Implementation;
 using movie.application.MovieApiIntegration.Interface;
 using movie.application.Services.Implementation;
 using movie.application.Services.Interface;
+using Serilog;
 
 namespace MovieApp
 {
@@ -37,6 +39,11 @@ namespace MovieApp
                                 .AllowAnyMethod();
                     });
             });
+
+            builder.Services.AddTransient<GlobalExceptionHandlingMiddleware>();
+
+            builder.Host.UseSerilog((context, configuration) =>
+                configuration.ReadFrom.Configuration(context.Configuration));
 
             var app = builder.Build();
 

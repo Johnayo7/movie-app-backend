@@ -63,7 +63,6 @@ namespace movie.test
 
             // Assert
             Assert.IsType<ApiResponseDTO<List<GetMoviesResponseDTO>>>(result.Item1);
-
         }
     }
 }

@@ -1,15 +1,15 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Decagon\\Source\\Repos\\movie-app-backend\\movie.domain\\movie.domain.csproj": {}
+    "C:\\Users\\Decagon\\source\\repos\\movie-app-backend\\movie.domain\\movie.domain.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Decagon\\Source\\Repos\\movie-app-backend\\movie.domain\\movie.domain.csproj": {
+    "C:\\Users\\Decagon\\source\\repos\\movie-app-backend\\movie.domain\\movie.domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Decagon\\Source\\Repos\\movie-app-backend\\movie.domain\\movie.domain.csproj",
+        "projectUniqueName": "C:\\Users\\Decagon\\source\\repos\\movie-app-backend\\movie.domain\\movie.domain.csproj",
         "projectName": "movie.domain",
-        "projectPath": "C:\\Users\\Decagon\\Source\\Repos\\movie-app-backend\\movie.domain\\movie.domain.csproj",
+        "projectPath": "C:\\Users\\Decagon\\source\\repos\\movie-app-backend\\movie.domain\\movie.domain.csproj",
         "packagesPath": "C:\\Users\\Decagon\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\Decagon\\Source\\Repos\\movie-app-backend\\movie.domain\\obj\\",
         "projectStyle": "PackageReference",
